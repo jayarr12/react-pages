@@ -12,7 +12,7 @@ class Contact extends React.Component {
           <title>{ TITLE }</title>
         </Helmet>
         <div className="container">
-          <h1>{ TITLE }</h1>
+          <h1 className="page-title">{ TITLE }</h1>
         </div>
       </div>
     )

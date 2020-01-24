@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { Helmet } from 'react-helmet';
+import { Redirect, BrowserRouter } from "react-router-dom";
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 const TITLE = 'Drupal & React'
 
@@ -30,17 +32,23 @@ class Home extends Component {
   render() {
     console.log(this.state.data);
     const imgurl = "https://widespreadtopic.com/" + this.state.data.field_res_image;
+    const body = this.state.data.body;
 
     return (
       <div>
+        <BrowserRouter>
+        <Redirect to="/" />
+        </BrowserRouter>
         <Helmet>
           <title>{ TITLE }</title>
         </Helmet>
         <div className="container">
-          <h1>{ TITLE }</h1>
-          <div className="react-pic"><img src={imgurl} alt="drupal&react"/></div> 
-          <div className="react-title">{this.state.data.title}</div>
-          <div className="react-body">{this.state.data.body}</div>
+          <div id="main-wrapper" className="layout-main-wrapper clearfix">
+            {/* <h1 className="page-title">{ TITLE }</h1> */}
+            <div className="react-pic"><img src={imgurl} alt="drupal&react"/></div> 
+            <h2 className="react-title">{this.state.data.title}</h2>
+            <div className="react-body">{ ReactHtmlParser(body) }</div>
+          </div>
         </div>
       </div>
     );

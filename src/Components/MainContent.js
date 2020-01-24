@@ -7,8 +7,8 @@ class MainContent extends Component {
 
   render() {
     return (
-      <main className="main" id="page">
-      </main>
+      <div id="main-wrapper" className="layout-main-wrapper clearfix">
+      </div>
     );
   }
 }

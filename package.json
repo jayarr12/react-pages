@@ -2,7 +2,7 @@
   "name": "myreactproj",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jayarr12.github.io/react-pages",
+  "homepage": "http://http://rogelio.me/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -14,7 +14,9 @@
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-hamburger-menu": "^1.1.1",
     "react-helmet": "^5.2.1",
+    "react-html-parser": "^2.0.2",
     "react-preloaders": "^3.0.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
